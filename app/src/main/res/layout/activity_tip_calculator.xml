@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipCalculator">
+
+    <TextView
+        android:id="@+id/billTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bill_text_view" />
+
+    <EditText
+        android:id="@+id/billET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/billTV"
+        android:ems="5"
+        android:hint="Enter Bill"
+        android:inputType="numberDecimal" />
+
+
+    <EditText
+        android:id="@+id/tipET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:ems="5"
+        android:hint="Enter Tip"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tipTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/tipET"
+        android:text="@string/tip_text_view" />
+
+    <TextView
+        android:id="@+id/finalbillTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tipET"
+        android:text="@string/finalbill_tip_text_view" />
+
+    <EditText
+        android:id="@+id/finalbillET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tipET"
+        android:layout_toRightOf="@id/finalbillTV"
+        android:ems="5"
+        android:hint="Final Bill"
+        android:editable="false"
+        android:inputType="numberDecimal" />
+
+    <SeekBar
+        android:id="@+id/tipSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tipET"
+        android:layout_alignRight="@+id/tipET"
+        android:layout_alignTop="@+id/finalbillET"
+        android:layout_toEndOf="@+id/finalbillET"
+        android:layout_toRightOf="@+id/finalbillET"
+        android:progress="20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
+        android:id="@+id/textView2"
+        android:textSize="40sp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/finalbillET"
+        android:layout_alignStart="@+id/finalbillET" />
+
+
+</RelativeLayout>
